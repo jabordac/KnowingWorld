@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout 
             BindingContext="{Binding Countries}"
-            Padding="10,10,0,10">
+            Padding="5,5,5,5">
 
             <SearchBar 
                 x:Name="searchBar"
@@ -33,51 +33,54 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid 
-                                Padding="10">
-                                <!--<Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding LocateCommand}"/>
-                                </Grid.GestureRecognizers>-->
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                
-                                <ImageButton
-                                    Grid.Column="0"
-                                    BackgroundColor="Transparent"
-                                    Command="{Binding LocateCommand}"
-                                    VerticalOptions="Start"
-                                    Source="ic_google_maps"
-                                    HeightRequest="80">
-                                </ImageButton>
-                                
-                                <StackLayout
-                                    Grid.Column="1"
-                                    VerticalOptions="Center">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Large"
-                                        Text="{Binding Name}"
-                                        TextTransform="Uppercase"
-                                        TextColor="DarkBlue">
-                                    </Label>
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Medium"
-                                        Text="{Binding Capital}"
-                                        TextTransform="Lowercase"
-                                        TextColor="Black">
-                                    </Label>
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Large"
-                                        Text="{Binding Region}"
-                                        TextTransform="Uppercase"
-                                        TextColor="Black">
-                                    </Label>
-                                </StackLayout>
-                            </Grid>
+                            <StackLayout Padding="8">
+                                <Frame HasShadow="True" >
+                                    <Grid>
+                                        <!--<Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding LocateCommand}"/>
+                                        </Grid.GestureRecognizers>-->
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <ImageButton
+                                            Grid.Column="0"
+                                            BackgroundColor="Transparent"
+                                            Command="{Binding LocateCommand}"
+                                            VerticalOptions="Start"
+                                            Source="ic_google_maps"
+                                            HeightRequest="80">
+                                        </ImageButton>
+
+                                        <StackLayout
+                                            Grid.Column="1"
+                                            VerticalOptions="Center">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="Large"
+                                                Text="{Binding Name}"
+                                                TextTransform="Uppercase"
+                                                TextColor="DarkBlue">
+                                            </Label>
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="Medium"
+                                                Text="{Binding Capital}"
+                                                TextTransform="Lowercase"
+                                                TextColor="Black">
+                                            </Label>
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="Large"
+                                                Text="{Binding Region}"
+                                                TextTransform="Uppercase"
+                                                TextColor="Black">
+                                            </Label>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
