@@ -19,11 +19,6 @@
                 Text="{Binding SearchText}">
             </SearchBar>
 
-            <!--SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"-->
-            <!--<SearchBar.Behaviors>
-                <local:EventToCommandBehavior EventName="TextChanged"/>
-            </SearchBar.Behaviors>-->
-
             <ListView 
                 IsRefreshing="{Binding IsRefreshing}"
                 ItemsSource="{Binding Countries}"
@@ -36,9 +31,6 @@
                             <StackLayout Padding="8">
                                 <Frame HasShadow="True" >
                                     <Grid>
-                                        <!--<Grid.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding LocateCommand}"/>
-                                        </Grid.GestureRecognizers>-->
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
